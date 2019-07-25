@@ -10,19 +10,14 @@ var color = ['pink','lightyellow','lightgreen','lightcyan','lightblue','violet']
 var pie = d3.pie();
 var arc = d3.arc().innerRadius(0).outerRadius(100);
 
-d3.select("svg")
-d3.select("svg")
-  .attr("width", width )
-  .attr("height", height )
-  .append("g")
-    .attr("transform", "translate(150, 150)")
-  .selectAll("path")
-    .data(pie(data))
-    .enter()
-    .append("path")
-      .attr("d",arc)
-      .attr("fill", function(d,i) {return color[i];});
 
+svg.selectAll("path")
+  .data(pie([data))
+  .enter()
+  .append("path")
+    .attr("d",arc)
+    .attr("fill", funtion(d,i) {return color[i];});
+ 
       </script>
 </body>
 </html>
